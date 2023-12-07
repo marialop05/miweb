@@ -1,0 +1,325 @@
+/***************************************************************************************/
+/*                  Web de Vikingos - hoja de autores                             */
+/*                       Author: María López López                                    */
+/*                        Version 1.0                                                  */
+/*  ************************************************************************************/
+/*
+
+/***************************************estilo general***********************************/
+
+@font-face {
+    font-family: titulos;
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: texto;
+    src: url('../fonts/FaunaOne-Regular.ttf');
+}
+
+
+* {box-sizing:border-box;
+margin:  0;
+padding: 0;}   
+
+body { background-color: rgb(129, 6, 6); /* ya lo quitaré */
+    font-family:texto;
+}
+
+#wrapper {background-color: rgb(0, 0, 0);
+        width:90%;
+        margin:auto;}
+
+section {padding-bottom:4%}
+
+/****** título de secciones **********/
+
+.titulo-seccion {font-family: titulos;
+    font-size: 2rem;
+    text-align:center;
+    font-weight:bold;
+    color:rgb(129, 6, 6);
+    padding:4% 0;}
+
+.enlace {text-decoration: none;
+    color:rgb(129, 6, 6);
+    font-weight:bold;}
+
+.enlace:hover {color:rgb(163, 76, 76);}         
+
+.centrado {text-align:center;}
+
+
+/*************** ESTILO DE NAV (TRAIDA DE W3SCHOOLS) ******************************/
+
+/* Add a black background color to the top navigation */
+nav {position:sticky;
+    top:0;
+    z-index:99;
+    opacity:0.8;}
+
+.topnav {
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background-color: rgb(16, 14, 14);
+        color: rgb(255, 255, 255);
+    }
+    
+    /* Add an active class to highlight the current page DESACTIVADO POR QUE NO LO VOY A PROGRAMAR ASÍ
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }   */
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+        display: none;
+    } 
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 900px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 900px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+} 
+
+
+
+
+
+/***************  HERO SECTION  VERSION 1******************************************/
+
+#hero { background-image:url('../imagenes/portada.jpg'); /* pongo foto */
+    height:100vh;                                /* dimensiono el alto */
+    background-repeat:no-repeat;                /* evito la repetición */
+    background-size:cover;                      /* la ajusto al espacio disponible */
+    background-position:center;                 /* para no recortar la figura principal */
+
+    font-family: titulos;
+    font-size:4.5rem; /* agrando porque la fuente sale más pequeña */
+    text-align:center;
+    font-weight:bold;
+    padding-top: 20px;
+}
+
+#titulo {
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: rat(2px); /* al fondo le aplica un filtro blur */
+        width:50%;
+        margin: auto;
+        padding:15px;
+        margin-top:20%;
+        color:rgb(129, 6, 6);
+    
+}
+/**************************** SECCIÓN INTRODUCCIÓN **************************/
+
+#texto-intro {
+            padding:0 2%;
+            margin: 100px;
+            color: #ffffff;
+            text-align: justify;
+}
+.container2 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/**************************** SECCIÓN RESUMEN ********************************/
+
+#resumen {background-color: #000000;
+        color: #fdfdfd;}
+
+/**** contenedor grid  **************/
+.grid2 {display:grid;
+    grid-template-columns: 50% 50%;}
+
+/**** que corra el aire (ver box-sizing arriba) ***/
+.texto {padding:20px;
+    font-size:1.2rem;
+    text-align: justify;
+    padding-left: 8%;
+    padding-right: 8%;}
+
+.texto li {margin-bottom:12px;}
+
+.col2 ul {list-style-image: url("../images/1024px-Red_check.svg.png");}
+
+/***** selector combinado (img DENTRO de .col2) ***/
+.col2 img {width:100%;}
+/**************************** SECCIÓN ACTORES *****************************/
+
+.grid4 {display:grid;
+    grid-template-columns: 25% 25% 25% 25%;}
+
+.col4 {padding:20px;}      
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+    background-color: #000000;
+    color: #f1f1f1;
+}
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+  /* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    text-align:center;
+}
+
+.card img {     /* selector contextual, solo para las img que estén DENTRO de una card */
+        width:100%;
+        height:400px;  /* OJO, LAS FOTOS DEBERÍAN RETOCARSE DESDE FUERA  */
+       /* opcional */
+        opacity: 0.5;    /* opcional, para hacer un efecto dinámico con el ratón */
+        transition: 1s;  /* cualquier cosa que pueda cambiar dinámicamente, tarda 1 segundo */
+        padding:4%;
+        
+    }
+
+.card img:hover {opacity:1;}   /* al poner el ratón encima, se define completamente la imagen */
+
+.card p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.card a {text-decoration: none;
+    font-weight:bold;
+    background-color: rgb(179, 65, 65);
+    border-radius: 30%;
+    transition:0.5s;
+    color:white;
+    padding:10px;
+    margin-bottom:10px;
+    display:inline-block;}     /* separa el bloque superior y el inferior, pero no ocupa el espacio de punta
+                                a punta, si hubiera otro inline-block, lo pondría a continuación...
+                                ***** ES LO QUE SE USA EN LAS BARRAS DE NAVEGACIÓN *********************/
+
+.card a:hover {background-color: rgb(158, 157, 157);
+            color:rgb(255, 255, 255);}
+
+/************************** FOOTER CON GRID DE 3 COLUMNAS 25-25-50 ************/
+
+footer {background-color: #000000;
+    padding:5% 0;}
+
+.grid3 {display:grid;
+    grid-template-columns: 25% 25% 50%;}
+
+.col3 {padding:6%;}        
+
+.col3 img {width:30%;
+       display:block;  /* se puede cambiar el tipo de componente de inline a block */
+        margin:auto;}
+.fa {
+    padding: 15px;  /*************/
+    font-size: 20px; /************/
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius:50%; /*************/
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}  
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+
+/**************************** MEDIA QUERIES *******************************/
+
+@media only screen and (width<=1000px){
+
+    #wrapper {width:100%;
+            font-size:2rem;}
+    
+    .grid2 {grid-template-columns:100%;} /* el grid pasa a ser de 1 columna en tablets */
+
+    #lista2 {margin-top:0px;}
+
+    .grid3 {grid-template-columns:50% 50%;
+            font-size:1.5rem;}
+
+    .grid4 {grid-template-columns: 50% 50%;}
+    
+}
+
+@media only screen and (width<=600px){
+
+    #titulo { width:80%;
+            }
+    .grid4 {grid-template-columns:100%;}
+}
